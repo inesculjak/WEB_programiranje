@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #141414, #222);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;
+    padding: 30px;
+}
+
+.content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* tablica */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th {
+    background: #972525;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td, th {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* hover efekt */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eaf4ff;
+    transition: 0.2s;
+}
+
+/* aside */
+aside img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+aside img:hover {
+    transform: scale(1.05);
+}
+
+/*grafikon*/
+:root {
+    --movie: 70;
+    --tv: 30;
+}
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    background: conic-gradient(
+        #972525 0% calc(var(--movie) * 1%),
+        #37749c calc(var(--movie) * 1%) 100%
+    );
+
+    margin: auto;
+    animation: grow 1.5s ease-out;
+    transition: 0.4s;
+}
+
+.pie-chart:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* animacija */
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/*analiza*/
+.analysis-flex {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+
+.analysis-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 260px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.analysis-box:hover {
+    transform: translateY(-5px);
+}
+
+/*form*/
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/*Footer*/
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: #141414;
+    color: white;
+    text-align: center;
+}
+
+/*Responzivnost*/
+@media (max-width: 768px) {
+
+    .main-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .analysis-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-container {
+        flex-direction: column;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
