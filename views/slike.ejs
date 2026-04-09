@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerija</title>
+    <link rel="stylesheet" href="/css/style_slike.css">
+</head>
+<body>
+
+<header>
+    <h1>Galerija slika</h1>
+</header>
+
+<main>
+<section class="galerija">
+
+<% images.forEach(image => { %>
+
+    <figure>
+        <a href="#<%= image.id %>">
+            <img src="<%= image.url %>" alt="<%= image.title %>">
+        </a>
+        <figcaption><%= image.title %></figcaption>
+    </figure>
+
+    <div id="<%= image.id %>" class="lightbox">
+        <a href="#" class="close">✖</a>
+        <img src="<%= image.full %>" alt="<%= image.title %>">
+    </div>
+
+<% }); %>
+
+</section>
+</main>
+
+</body>
+</html>
